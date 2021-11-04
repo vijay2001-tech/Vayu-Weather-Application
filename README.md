@@ -16,7 +16,6 @@ It is a simple weather application is made for a mini project. The main feature 
 
 ## Screenshots
 
-![App Screenshot](https://github.com/londonappbrewery/Images/blob/master/AppBreweryBanner.png)
 
 ![App Screenshot](https://github.com/vijay2001-tech/Vayu-Weather-Application/blob/master/assets/images/Cloudy.jpg)
 
