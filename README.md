@@ -16,7 +16,7 @@ It is a simple weather application is made for a mini project. The main feature 
 
 ## Screenshots
 
-![App Screenshot](https://drive.google.com/file/d/1i20DJAVeKMYcVCEosvUPSUNvU3DSaYpX/view?usp=sharing)
+![App Screenshot](https://github.com/londonappbrewery/Images/blob/master/AppBreweryBanner.png)
 
 ![App Screenshot](https://drive.google.com/file/d/14cPWzNvSr0id3SqgDXrF6Udw5CnZqO5i/view?usp=sharing)
 
