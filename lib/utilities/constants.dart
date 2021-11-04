@@ -24,7 +24,7 @@ const String kweatherApiUrl =
     "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/"; // Weather Api URL
 
 const String kweatherApiKey =
-    "X2LY7T54WSY7LTRSGBZZVAHT6"; // TODO : compulsory give weather API key for registring visit visualcrossing website , it is free
+    ""; // TODO : compulsory give weather API key for registring visit visualcrossing website , it is free
 
 const kTextFieldInputDecoration = InputDecoration(
   icon: Icon(
