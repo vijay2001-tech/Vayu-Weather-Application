@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-const kApiKey = 'f8433902814f76cc77bf8bfab9c455ff';
 const kTempTextStyle = TextStyle(
   fontFamily: 'Spartan MB',
   fontSize: 100.0,
@@ -21,8 +20,11 @@ const kConditionTextStyle = TextStyle(
 );
 const kCityListApiUrl =
     'https://countriesnow.space/api/v0.1/countries/population/cities';
-const String kOpenWeatherApiUrl =
-    'https://api.openweathermap.org/data/2.5/weather';
+const String kweatherApiUrl =
+    "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/"; // Weather Api URL
+
+const String kweatherApiKey =
+    "X2LY7T54WSY7LTRSGBZZVAHT6"; // TODO : compulsory give weather API key for registring visit visualcrossing website , it is free
 
 const kTextFieldInputDecoration = InputDecoration(
   icon: Icon(
@@ -42,3 +44,13 @@ const kTextFieldInputDecoration = InputDecoration(
     borderSide: BorderSide.none,
   ),
 );
+
+// For background images
+
+const kSunrisingImage = 'assets/images/Sunrising.jpg';
+const kNightImage = 'assets/images/Night.jpg';
+const kCloudyImage = 'assets/images/Cloudy.jpg';
+const kRainyImage = 'assets/images/Rainy3.jpg';
+const kSunnyBeachImage = 'assets/images/Sunny_beach.jpg';
+const kFogImage = 'assets/images/Foggy.jpg';
+const kSnowyImage = 'assets/images/Snowy.jpg';

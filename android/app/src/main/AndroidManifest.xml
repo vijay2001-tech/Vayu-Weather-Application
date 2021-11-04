@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="co.appbrewery.clima">
+    package="co.mypackage.vayu">
  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <!-- io.flutter.app.FlutterApplication is an android.app.Application that
@@ -9,7 +9,7 @@
          FlutterApplication and put your custom class here. -->
     <application
         
-        android:label="clima"
+        android:label="Vayu"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

@@ -18,19 +18,28 @@ dependencies:
   auto_search: ^1.0.6
   enough_convert: ^1.3.0
   date_format: ^2.0.2
-
+  weather_icons: ^3.0.0
+  provider: ^6.0.1
+  connectivity: ^0.4.2
+  
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
 flutter:
   uses-material-design: true
-
   assets:
-  - images/
-
-  fonts:
+    - assets/images/
+ 
+fonts:
   - family: Spartan MB
     fonts:
     - asset: fonts/SpartanMB-Black.otf
       weight: 900
+  - family: NotoSans
+    fonts:
+    
+  
+    - asset : fonts/NotoSansJP-Light.otf 
+    - weight : 300

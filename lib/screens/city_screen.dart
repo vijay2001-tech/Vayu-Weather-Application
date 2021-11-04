@@ -2,15 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:clima/utilities/constants.dart';
 import 'package:auto_search/auto_search.dart';
 import 'package:clima/services/citys_list.dart';
+import 'package:clima/services/weather_informer.dart';
+import 'package:provider/provider.dart';
 
 class CityScreen extends StatefulWidget {
+  CityScreen();
   @override
   _CityScreenState createState() => _CityScreenState();
 }
 
 class _CityScreenState extends State<CityScreen> {
-  String cityName = '';
-  List<String> listofNames = [''];
+  String _cityName = '';
+  static List<String> listofNames = [''];
 
   @override
   void initState() {
@@ -20,7 +23,8 @@ class _CityScreenState extends State<CityScreen> {
   }
 
   Future initiateList() async {
-    listofNames = await CityList().getCityList();
+    if (!(listofNames.length > 1)) listofNames = await CityList().getCityList();
+
     setState(() {
       listofNames.add('');
     });
@@ -31,11 +35,10 @@ class _CityScreenState extends State<CityScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('images/Snowy.jpg'),
+            image: AssetImage('assets/images/Sunrising.jpg'),
             fit: BoxFit.cover,
           ),
         ),
@@ -64,19 +67,30 @@ class _CityScreenState extends State<CityScreen> {
                       height: 350.0,
                       child: SingleChildScrollView(
                         child: AutoSearchInput(
+                          fontSize: 20.0,
+                          unSelectedTextColor: Colors.white,
+                          selectedTextColor: Colors.white,
+                          // enabledBorderColor: Colors.white,
                           itemsShownAtStart: 6,
                           data: listofNames,
                           maxElementsToDisplay: 10,
+                          onSubmitted: (String cityname) {
+                            print("onsubmmitted");
+                          },
+                          onEditingComplete: () {
+                            print("on Editing done");
+                          },
                           onItemTap: (int index) {
-                            print(listofNames[index]);
                             int ind = listofNames[index].indexOf(' ');
-
+                            FocusScope.of(context)
+                                .requestFocus(new FocusNode());
                             setState(() {
-                              cityName = listofNames[index]
+                              _cityName = listofNames[index]
                                   .toString()
                                   .substring(0, ind);
                             });
-                            print(cityName);
+
+                            print(_cityName);
                           },
                         ),
                       ),
@@ -85,7 +99,9 @@ class _CityScreenState extends State<CityScreen> {
                     // ignore: deprecated_member_use
                     FlatButton(
                       onPressed: () {
-                        Navigator.pop(context, cityName);
+                        Provider.of<WeatherInformer>(context, listen: false)
+                            .getLocationWeatherInfo(cityName: this._cityName);
+                        Navigator.pop(context);
                       },
                       child: Text(
                         'Get Weather',
